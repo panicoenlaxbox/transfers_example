@@ -1,0 +1,16 @@
+:host {
+    cursor: pointer;
+}
+
+div {
+    min-width: 100px;
+    min-height: 100px;
+    background-color: bisque;
+    margin: 10px;
+    padding: 10px;
+}
+
+div.active {
+    background-color: blue;
+    color: white;
+}

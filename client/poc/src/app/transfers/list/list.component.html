@@ -1,0 +1,12 @@
+<p-dataView #dv [value]="data" [layout]="'grid'" [paginator]="true" [rows]="10" [lazy]="true"
+  (onLazyLoad)="loadData($event)" [totalRecords]="totalRecords">
+  <p-header>
+    <input type="search" pInputText placeholder="Search by name" (keyup.enter)="search($event.target.value)">
+  </p-header>
+  <ng-template let-item pTemplate="gridItem">
+    <app-item [data]="item" (select)="onSelect(item)"></app-item>
+  </ng-template>
+</p-dataView>
+<!-- <p>{{ transferService.getSourceObservable() | async | json }}</p> -->
+<p>{{ transferState$ | async | json }}</p>
+<p>{{ transferStateItem$ | async | json }}</p>
